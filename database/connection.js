@@ -1,8 +1,9 @@
 const mongoose = require("mongoose")
+const ENV = require("env")
 
 const  connection = async ()=>{
     try {
-        await mongoose.connect("mongodb+srv://calderonjmigueldev_db_user:Sumergido1@cluster0.bankqua.mongodb.net/Social_Net")
+        await mongoose.connect("mongodb+srv://@cluster0.bankqua.mongodb.net/Social_Net")
         console.log("conectado correctamente DB");
         
     } catch (error) {
