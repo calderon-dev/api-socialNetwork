@@ -1,9 +1,10 @@
 const mongoose = require("mongoose")
-const ENV = require("env")
+require('dotenv').config();
+const uri = process.env.MONGO_URI
 
 const  connection = async ()=>{
     try {
-        await mongoose.connect("mongodb+srv://@cluster0.bankqua.mongodb.net/Social_Net")
+        await mongoose.connect(uri)
         console.log("conectado correctamente DB");
         
     } catch (error) {
